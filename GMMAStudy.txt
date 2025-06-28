@@ -1,0 +1,59 @@
+# ThinkScript implementation of the Guppy Multiple Moving Average (GMMA)
+# More information on the GMMA study may be found at this website:
+# https://www.babypips.com/learn/forex/guppy-multiple-moving-average
+
+# This implementation was created from the original Moving ExpAverage Ribbon study in ThinkorSwim
+# I did it because I believe the GMMA can be a highly effective trading tool for me.
+# All constructive feedback and critiques are welcome! Please feel free to use and enjoy this study!
+
+# Adam Fuller, adamsfuller78@gmail.com
+# Posted 2025-06-27
+
+input price = close;
+input arithOrGeom1or2 = 1;
+
+#Short (fast) group of Exponential Moving Averages
+#EMA lengths are 3, 5, 8, 10, 12, 15
+
+plot XMA1;
+plot XMA2;
+plot XMA3;
+plot XMA4;
+plot XMA5;
+plot XMA6;
+
+#Long (slow) group of Exponential Moving Averages
+#EMA lengths are 30, 35, 40, 45, 50, 60
+
+plot XMA7;
+plot XMA8;
+plot XMA9;
+plot XMA10;
+plot XMA11;
+plot XMA12;
+
+    XMA1 = ExpAverage(price, 3);
+    XMA2 = ExpAverage(price,5);
+    XMA3 = ExpAverage(price,8);
+    XMA4 = ExpAverage(price, 10);
+    XMA5 = ExpAverage(price, 12);
+    XMA6 = ExpAverage(price, 15);
+    XMA7 = ExpAverage(price, 30);
+    XMA8 = ExpAverage(price, 35);
+    XMA9 = ExpAverage(price, 40);
+    XMA10 = ExpAverage(price, 45);
+    XMA11 = ExpAverage(price, 50);
+    XMA12 = ExpAverage(price, 60);
+
+XMA1.SetDefaultColor(CreateColor(255, 77, 0));
+XMA2.SetDefaultColor(CreateColor(255, 77, 0));
+XMA3.SetDefaultColor(CreateColor(255, 77, 0));
+XMA4.SetDefaultColor(CreateColor(255, 77, 0));
+XMA5.SetDefaultColor(CreateColor(255, 77, 0));
+XMA6.SetDefaultColor(CreateColor(255, 77, 0));
+XMA7.SetDefaultColor(CreateColor(0, 140, 255));
+XMA8.SetDefaultColor(CreateColor(0, 140, 255));
+XMA9.SetDefaultColor(CreateColor(0, 140, 255));
+XMA10.SetDefaultColor(CreateColor(0, 140, 255));
+XMA11.SetDefaultColor(CreateColor(0, 140, 255));
+XMA12.SetDefaultColor(CreateColor(0, 140, 255));
