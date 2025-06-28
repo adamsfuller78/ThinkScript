@@ -1,0 +1,137 @@
+# I originally found this Madrid EMA Ribbon study at: https://usethinkscript.com/threads/madrid-ema-ribbon-for-thinkorswim.18903/
+# This study was posted by UID Passytroca
+
+# I wanted to make sure I give credit to the original poster first thing.
+# I am posting it here for the purpose of propagating this information.
+# This is the sort of study that works for me and I believe it can work for others!
+
+input price = close;
+input baseLength = 10;
+input incrementOrMultiplier = 10;
+input arithOrGeom1or2 = 1;
+
+plot XMA1;
+plot XMA2;
+plot XMA3;
+plot XMA4;
+plot XMA5;
+plot XMA6;
+plot XMA7;
+plot XMA8;
+plot XMA9;
+plot XMA10;
+plot XMA11;
+plot XMA12;
+plot XMA13;
+plot XMA14;
+plot XMA15;
+plot XMA16;
+plot XMA17;
+plot XMA18;
+plot XMA19;
+if (arithOrGeom1or2 == 1)
+then {
+    XMA1 = ExpAverage(price, baseLength);
+    XMA2 = ExpAverage(price, baseLength + 1 * incrementOrMultiplier);
+    XMA3 = ExpAverage(price, baseLength + 2 * incrementOrMultiplier);
+    XMA4 = ExpAverage(price, baseLength + 3 * incrementOrMultiplier);
+    XMA5 = ExpAverage(price, baseLength + 4 * incrementOrMultiplier);
+    XMA6 = ExpAverage(price, baseLength + 5 * incrementOrMultiplier);
+    XMA7 = ExpAverage(price, baseLength + 6 * incrementOrMultiplier);
+    XMA8 = ExpAverage(price, baseLength + 7 * incrementOrMultiplier);
+    XMA9 = ExpAverage(price, baseLength + 8 * incrementOrMultiplier);
+    XMA10 = ExpAverage(price, baseLength + 9 * incrementOrMultiplier);
+    XMA11 = ExpAverage(price, baseLength + 10 * incrementOrMultiplier);
+    XMA12 = ExpAverage(price, baseLength + 11 * incrementOrMultiplier);
+    XMA13 = ExpAverage(price, baseLength + 12 * incrementOrMultiplier);
+    XMA14 = ExpAverage(price, baseLength + 13 * incrementOrMultiplier);
+    XMA15 = ExpAverage(price, baseLength + 14 * incrementOrMultiplier);
+    XMA16 = ExpAverage(price, baseLength + 15 * incrementOrMultiplier);
+    XMA17 = ExpAverage(price, baseLength + 16 * incrementOrMultiplier);
+    XMA18 = ExpAverage(price, baseLength + 17 * incrementOrMultiplier);
+    XMA19 = ExpAverage(price, baseLength + 18 * incrementOrMultiplier);
+} else {
+    XMA1 = ExpAverage(price, baseLength);
+    XMA2 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 1));
+    XMA3 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 2));
+    XMA4 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 3));
+    XMA5 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 4));
+    XMA6 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 5));
+    XMA7 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 6));
+    XMA8 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 7));
+    XMA9 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 8));
+    XMA10 = ExpAverage(price, baseLength* Power(incrementOrMultiplier, 9));
+    XMA11 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 10));
+    XMA12 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 11));
+    XMA13 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 12));
+    XMA14 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 13));
+    XMA15 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 14));
+    XMA16 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 15));
+    XMA17 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 16));
+    XMA18 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 17));
+    XMA19 = ExpAverage(price, baseLength * Power(incrementOrMultiplier, 18));
+}
+
+
+
+DefineGlobalColor("X1", CreateColor(255, 50, 0));
+DefineGlobalColor("X2", CreateColor(255, 60, 0));
+DefineGlobalColor("X3", CreateColor(255, 70, 0));
+DefineGlobalColor("X4", CreateColor(255, 80, 0));
+DefineGlobalColor("X5", CreateColor(255, 90, 0));
+DefineGlobalColor("X6", CreateColor(255, 100, 0));
+DefineGlobalColor("X7", CreateColor(255, 110, 0));
+DefineGlobalColor("X8", CreateColor(255, 120, 0));
+DefineGlobalColor("X9", CreateColor(255, 130, 0));
+DefineGlobalColor("X10", CreateColor(255, 140, 0));
+DefineGlobalColor("X11", CreateColor(255, 150, 0));
+DefineGlobalColor("X12", CreateColor(255, 160, 0));
+DefineGlobalColor("X13", CreateColor(255, 170, 0));
+DefineGlobalColor("X14", CreateColor(255, 180, 0));
+DefineGlobalColor("X15", CreateColor(255, 190, 0));
+DefineGlobalColor("X16", CreateColor(255, 200, 0));
+DefineGlobalColor("X17", CreateColor(255, 210, 0));
+DefineGlobalColor("X18", CreateColor(255, 220, 0));
+DefineGlobalColor("X19", CreateColor(255, 230, 0));
+
+
+DefineGlobalColor("Xx1", CreateColor(0, 255, 50));
+DefineGlobalColor("Xx2", CreateColor(0, 255, 60));
+DefineGlobalColor("Xx3", CreateColor(0, 255, 70));
+DefineGlobalColor("Xx4", CreateColor(0, 255, 80));
+DefineGlobalColor("Xx5", CreateColor(0, 255, 90));
+DefineGlobalColor("Xx6", CreateColor(0, 255,100));
+DefineGlobalColor("Xx7", CreateColor(0, 255, 110));
+DefineGlobalColor("Xx8", CreateColor(0, 255, 120));
+DefineGlobalColor("Xx9", CreateColor(0, 255, 130));
+DefineGlobalColor("Xx10", CreateColor(0,255, 140));
+DefineGlobalColor("Xx11", CreateColor(0, 255, 150));
+DefineGlobalColor("Xx12", CreateColor(0, 255, 160));
+DefineGlobalColor("Xx13", CreateColor(0, 255, 170));
+DefineGlobalColor("Xx14", CreateColor(0, 255, 180));
+DefineGlobalColor("Xx15", CreateColor(0, 255, 190));
+DefineGlobalColor("Xx16", CreateColor(0, 255, 200));
+DefineGlobalColor("Xx17", CreateColor(0, 255, 210));
+DefineGlobalColor("Xx18", CreateColor(0, 255, 220));
+DefineGlobalColor("Xx19", CreateColor(0, 255, 230));
+
+
+XMA1 .AssignValueColor( if Xma1 <= Xma1[1]  then GlobalColor("X1")else GlobalColor("Xx1"));
+XMA2 .AssignValueColor( if Xma2 <= Xma2[1]  then GlobalColor("X2")else GlobalColor("Xx2"));
+XMA3 .AssignValueColor( if Xma3 <= Xma3[1]  then GlobalColor("X3")else GlobalColor("Xx3"));
+XMA4 .AssignValueColor( if Xma4 <= Xma4[1]  then GlobalColor("X4")else GlobalColor("Xx4"));
+XMA5 .AssignValueColor( if XMA5 <= XMA5[1]  then GlobalColor("X5")else GlobalColor("Xx5"));
+XMA6 .AssignValueColor( if XMA6 <= XMA6[1]  then GlobalColor("X6")else GlobalColor("Xx6"));
+XMA7 .AssignValueColor( if XMA7 <= XMA7[1]  then GlobalColor("X7")else GlobalColor("Xx7"));
+XMA8 .AssignValueColor( if XMA8 <= XMA8[1]  then GlobalColor("X8")else GlobalColor("Xx8"));
+XMA9 .AssignValueColor( if XMA9 <= XMA9[1]  then GlobalColor("X9")else GlobalColor("Xx9"));
+XMA10 .AssignValueColor( if XMA10 <= XMA10[1]  then GlobalColor("X10")else GlobalColor("Xx10"));
+XMA11 .AssignValueColor( if XMA11 <= XMA11[1]  then GlobalColor("X11")else GlobalColor("Xx11"));
+XMA12 .AssignValueColor( if Xma12 <= Xma12[1]  then GlobalColor("X12")else GlobalColor("Xx12"));
+XMA13 .AssignValueColor( if Xma13 <= Xma13[1]  then GlobalColor("X13")else GlobalColor("Xx13"));
+XMA14 .AssignValueColor( if Xma14 <= Xma14[1]  then GlobalColor("X14")else GlobalColor("Xx14"));
+XMA15 .AssignValueColor( if Xma15 <= Xma15[1]  then GlobalColor("X15")else GlobalColor("Xx15"));
+XMA16 .AssignValueColor( if Xma16 <= Xma16[1]  then GlobalColor("X16")else GlobalColor("Xx16"));
+XMA17 .AssignValueColor( if Xma17 <= Xma17[1]  then GlobalColor("X17")else GlobalColor("Xx17"));
+XMA18 .AssignValueColor( if Xma18 <= Xma18[1]  then GlobalColor("X18")else GlobalColor("Xx18"));
+XMA19 .AssignValueColor( if Xma19 <= Xma19[1]  then GlobalColor("X19")else GlobalColor("Xx19"));
