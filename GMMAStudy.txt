@@ -45,12 +45,12 @@ plot XMA12;
     XMA11 = ExpAverage(price, 50);
     XMA12 = ExpAverage(price, 60);
 
-XMA1.SetDefaultColor(CreateColor(255, 77, 0));
-XMA2.SetDefaultColor(CreateColor(255, 77, 0));
-XMA3.SetDefaultColor(CreateColor(255, 77, 0));
-XMA4.SetDefaultColor(CreateColor(255, 77, 0));
-XMA5.SetDefaultColor(CreateColor(255, 77, 0));
-XMA6.SetDefaultColor(CreateColor(255, 77, 0));
+XMA1.SetDefaultColor(CreateColor(255, 142, 0));
+XMA2.SetDefaultColor(CreateColor(255, 142, 0));
+XMA3.SetDefaultColor(CreateColor(255, 142, 0));
+XMA4.SetDefaultColor(CreateColor(255, 142, 0));
+XMA5.SetDefaultColor(CreateColor(255, 142, 0));
+XMA6.SetDefaultColor(CreateColor(255, 142, 0));
 XMA7.SetDefaultColor(CreateColor(0, 140, 255));
 XMA8.SetDefaultColor(CreateColor(0, 140, 255));
 XMA9.SetDefaultColor(CreateColor(0, 140, 255));
